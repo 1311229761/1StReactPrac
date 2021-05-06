@@ -8,9 +8,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      {
+          price.map(janina => <Pd name= {janina.name} worth = {janina.mollo}></Pd>)
+        }
        <Users></Users>
        <Counter></Counter>
-        <Person name = {name[0]} job= "debeloper"></Person>
+        <Person name = {price[0].name} job= "debeloper"></Person>
         <Person name = {name[1]} job="farmer"></Person>
         <Person name = {name[2]} job = "army"></Person>
         <Person name = {name[3]} job= "bakeary calai"></Person>
@@ -22,9 +25,7 @@ function App() {
           {name.map(nam=><li>{nam}</li>)}
           {price.map(mollo=> <li>{mollo.name}</li> )}
         </ul>
-       {
-         price.map(taka => <pd pd={taka}></pd>)
-       }
+      
      
       </header>
     </div>
